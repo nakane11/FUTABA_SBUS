@@ -1,21 +1,20 @@
-
 #ifndef FUTABA_SBUS_h
 #define FUTABA_SBUS_h
 
 #include <Arduino.h>
-
+#include <SoftwareSerial.h>
 
 #define SBUS_SIGNAL_OK          0x00
 #define SBUS_SIGNAL_LOST        0x01
 #define SBUS_SIGNAL_FAILSAFE    0x03
 #define BAUDRATE 100000
-#define port Serial1
-//#define ALL_CHANNELS
 
+//#define ALL_CHANNELS
 
 class FUTABA_SBUS
 {
 	public:
+        SoftwareSerial port =  SoftwareSerial(2, 3);
 		uint8_t sbusData[25];
 		int16_t channels[18];
 		int16_t servos[18];

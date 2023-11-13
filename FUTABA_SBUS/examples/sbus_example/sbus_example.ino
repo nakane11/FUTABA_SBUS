@@ -1,7 +1,6 @@
 #include <FUTABA_SBUS.h>
 #include <Streaming.h>
 
-
 FUTABA_SBUS sBus;
 
 
